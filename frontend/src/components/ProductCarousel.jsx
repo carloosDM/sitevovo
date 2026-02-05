@@ -11,9 +11,10 @@ const ProductCarousel = () => {
   // Responsive items per view
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) {
+      const width = window.innerWidth;
+      if (width < 640) {
         setItemsPerView(1);
-      } else if (window.innerWidth < 1024) {
+      } else if (width < 1024) {
         setItemsPerView(2);
       } else {
         setItemsPerView(3);
@@ -29,7 +30,7 @@ const ProductCarousel = () => {
   useEffect(() => {
     if (!isPaused) {
       intervalRef.current = setInterval(() => {
-        nextSlide();
+        setCurrentIndex((prev) => (prev + 1) % products.length);
       }, 3500);
     }
 
@@ -38,7 +39,7 @@ const ProductCarousel = () => {
         clearInterval(intervalRef.current);
       }
     };
-  }, [currentIndex, isPaused, itemsPerView]);
+  }, [isPaused]);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % products.length);
@@ -48,26 +49,18 @@ const ProductCarousel = () => {
     setCurrentIndex((prev) => (prev - 1 + products.length) % products.length);
   };
 
-  const getVisibleProducts = () => {
-    return products.slice(currentIndex, currentIndex + itemsPerView).concat(
-      currentIndex + itemsPerView > products.length
-        ? products.slice(0, (currentIndex + itemsPerView) % products.length)
-        : []
-    );
+  const getTagColor = (tag) => {
+    if (tag === 'Mais Pedido') return 'bg-[#FFBB98] text-[#403234]';
+    if (tag === 'Novo') return 'bg-[#b4dc19] text-[#403234]';
+    if (tag === 'Caseiro') return 'bg-[#FBE0C3] text-[#403234]';
+    return 'bg-[#F7F3F5] text-[#403234]';
   };
 
-  const getTagColor = (tag) => {
-    switch (tag) {
-      case 'Mais Pedido':
-        return 'bg-[#FFBB98] text-[#403234]';
-      case 'Novo':
-        return 'bg-[#b4dc19] text-[#403234]';
-      case 'Caseiro':
-        return 'bg-[#FBE0C3] text-[#403234]';
-      default:
-        return 'bg-[#F7F3F5] text-[#403234]';
-    }
-  };
+  const visibleProducts = [];
+  for (let i = 0; i < itemsPerView; i++) {
+    const idx = (currentIndex + i) % products.length;
+    visibleProducts.push(products[idx]);
+  }
 
   return (
     <section id="menu" className="py-16 sm:py-20 bg-[#F7F3F5]">
@@ -90,7 +83,7 @@ const ProductCarousel = () => {
         >
           {/* Products Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {getVisibleProducts().map((product) => (
+            {visibleProducts.map((product) => (
               <div
                 key={product.id}
                 className="product-card group"
