@@ -235,3 +235,42 @@ html {
   box-shadow: 0 8px 30px rgba(64, 50, 52, 0.15);
   border-color: #FFBB98;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .carousel-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .product-card {
+    padding: 1rem;
+  }
+
+  .value-card {
+    padding: 1.25rem;
+  }
+
+  .testimonial-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.875rem 1.75rem;
+  }
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
