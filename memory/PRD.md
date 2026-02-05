@@ -98,6 +98,20 @@ Criar um site "cartão de visita" (one page) para a padaria artesanal "Delícias
 - Tipografia escalável
 - Espaçamento responsivo
 
+### ✅ Seção de Depoimentos (NOVO)
+- 6 depoimentos autênticos de clientes
+- Cards com:
+  - Avatar do cliente (emoji)
+  - Nome e localização
+  - Avaliação 5 estrelas
+  - Texto do depoimento
+  - Data do depoimento
+- Navegação por setas entre grupos de depoimentos
+- Layout responsivo: 1 card (mobile), 2 cards (tablet), 3 cards (desktop)
+- CTA final "Fazer Meu Pedido" integrado
+- Ícone de aspas decorativo
+- Hover effects nos cards
+
 ---
 
 ## Produtos no Menu (Mock Data)
@@ -149,7 +163,8 @@ Criar um site "cartão de visita" (one page) para a padaria artesanal "Delícias
 ## Próximos Passos
 
 1. ✅ **MVP Frontend Concluído** - Site funcional com mock data
-2. **Fase 2 - Backend (Aguardando aprovação do usuário):**
+2. ✅ **Seção de Depoimentos Adicionada** - Prova social para aumentar conversão
+3. **Fase 2 - Backend (Aguardando aprovação do usuário):**
    - Criar modelos MongoDB para produtos, categorias
    - Endpoints CRUD para produtos
    - Integração frontend-backend
