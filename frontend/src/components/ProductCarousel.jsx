@@ -49,12 +49,11 @@ const ProductCarousel = () => {
   };
 
   const getVisibleProducts = () => {
-    const visible = [];
-    for (let i = 0; i < itemsPerView; i++) {
-      const index = (currentIndex + i) % products.length;
-      visible.push(products[index]);
-    }
-    return visible;
+    return products.slice(currentIndex, currentIndex + itemsPerView).concat(
+      currentIndex + itemsPerView > products.length
+        ? products.slice(0, (currentIndex + itemsPerView) % products.length)
+        : []
+    );
   };
 
   const getTagColor = (tag) => {
