@@ -3,7 +3,9 @@ import { Heart, Star, Sparkles } from 'lucide-react';
 import { aboutText } from '../data/mockData';
 
 const About = () => {
-  const valueIcons = [Heart, Star, Sparkles];
+  const Icon1 = Heart;
+  const Icon2 = Star;
+  const Icon3 = Sparkles;
 
   return (
     <section id="sobre" className="py-16 sm:py-20 bg-gradient-to-br from-[#FBE0C3]/30 to-[#FFBB98]/20">
@@ -34,14 +36,18 @@ const About = () => {
 
               {/* Story Text */}
               <div className="space-y-4 text-[#403234]/90 font-body">
-                {aboutText.paragraphs.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className="text-sm sm:text-base leading-relaxed"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                <p className="text-sm sm:text-base leading-relaxed">
+                  {aboutText.paragraphs[0]}
+                </p>
+                <p className="text-sm sm:text-base leading-relaxed">
+                  {aboutText.paragraphs[1]}
+                </p>
+                <p className="text-sm sm:text-base leading-relaxed">
+                  {aboutText.paragraphs[2]}
+                </p>
+                <p className="text-sm sm:text-base leading-relaxed">
+                  {aboutText.paragraphs[3]}
+                </p>
               </div>
             </div>
 
@@ -52,32 +58,56 @@ const About = () => {
               </h3>
 
               <div className="space-y-4 sm:space-y-6">
-                {aboutText.values.map((value, index) => {
-                  const Icon = valueIcons[index];
-                  return (
-                    <div
-                      key={index}
-                      className="value-card group"
-                    >
-                      <div className="flex items-start gap-4">
-                        {/* Icon */}
-                        <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-[#FFBB98] to-[#FBE0C3] flex items-center justify-center transition-transform group-hover:scale-110">
-                          <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-[#403234]" />
-                        </div>
-
-                        {/* Content */}
-                        <div className="flex-1 space-y-1">
-                          <h4 className="text-lg sm:text-xl font-bold text-[#403234] font-body">
-                            {value.title}
-                          </h4>
-                          <p className="text-sm sm:text-base text-[#403234]/80 font-body">
-                            {value.description}
-                          </p>
-                        </div>
-                      </div>
+                {/* Value 1 */}
+                <div className="value-card group">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-[#FFBB98] to-[#FBE0C3] flex items-center justify-center transition-transform group-hover:scale-110">
+                      <Icon1 className="w-6 h-6 sm:w-7 sm:h-7 text-[#403234]" />
                     </div>
-                  );
-                })}
+                    <div className="flex-1 space-y-1">
+                      <h4 className="text-lg sm:text-xl font-bold text-[#403234] font-body">
+                        {aboutText.values[0].title}
+                      </h4>
+                      <p className="text-sm sm:text-base text-[#403234]/80 font-body">
+                        {aboutText.values[0].description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Value 2 */}
+                <div className="value-card group">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-[#FFBB98] to-[#FBE0C3] flex items-center justify-center transition-transform group-hover:scale-110">
+                      <Icon2 className="w-6 h-6 sm:w-7 sm:h-7 text-[#403234]" />
+                    </div>
+                    <div className="flex-1 space-y-1">
+                      <h4 className="text-lg sm:text-xl font-bold text-[#403234] font-body">
+                        {aboutText.values[1].title}
+                      </h4>
+                      <p className="text-sm sm:text-base text-[#403234]/80 font-body">
+                        {aboutText.values[1].description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Value 3 */}
+                <div className="value-card group">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-[#FFBB98] to-[#FBE0C3] flex items-center justify-center transition-transform group-hover:scale-110">
+                      <Icon3 className="w-6 h-6 sm:w-7 sm:h-7 text-[#403234]" />
+                    </div>
+                    <div className="flex-1 space-y-1">
+                      <h4 className="text-lg sm:text-xl font-bold text-[#403234] font-body">
+                        {aboutText.values[2].title}
+                      </h4>
+                      <p className="text-sm sm:text-base text-[#403234]/80 font-body">
+                        {aboutText.values[2].description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Decorative Quote */}
