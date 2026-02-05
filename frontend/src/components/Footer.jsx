@@ -77,10 +77,10 @@ const Footer = () => {
             </p>
             <button
               onClick={openWhatsApp}
-              className="btn-primary bg-[#FFBB98] hover:bg-[#FBE0C3] text-[#403234] w-full sm:w-auto"
+              className="btn-primary bg-[#FFBB98] hover:bg-[#FBE0C3] text-[#403234] w-full sm:w-auto flex items-center gap-2 px-4 py-2 rounded"
             >
-              <MessageCircle className="w-5 h-5" />
-              Pedir Agora
+              <img className="w-5 h-5" src="whatsapp.png" alt="WhatsApp" />
+              <span>Pedir Agora</span>
             </button>
           </div>
         </div>

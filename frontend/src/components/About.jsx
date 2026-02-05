@@ -26,10 +26,7 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#FFBB98] to-[#FBE0C3] rounded-full animate-pulse-slow" />
                 <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center">
                   <div className="text-center space-y-2">
-                    <div className="text-6xl sm:text-7xl">👵</div>
-                    <p className="text-lg sm:text-xl font-handwritten font-bold text-[#403234]">
-                      Vovó Idalcy
-                    </p>
+                    <img src="avatar.png" alt="Descrição da imagem" />
                   </div>
                 </div>
               </div>
