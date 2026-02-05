@@ -31,13 +31,13 @@ const Hero = () => {
       </div>
       {/* Decorative Elements */}
       <div className="absolute top-20 left-10 w-16 h-16 sm:w-24 sm:h-24 animate-float">
-        <svg viewBox="0 0 100 100" class="w-24 h-24">
+        <svg viewBox="0 0 100 100" className="w-24 h-24">
           <defs>
             <clipPath id="circleClip">
               <circle cx="50" cy="50" r="45" />
             </clipPath>
           </defs>
-          <image href="avatar1.png" width="100" height="100" clip-path="url(#circleClip)" />
+          <image href="avatar1.png" width="100" height="100" clipPath="url(#circleClip)" />
         </svg>
       </div>
 
