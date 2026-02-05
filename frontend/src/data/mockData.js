@@ -161,3 +161,60 @@ export const heroImages = {
   background: "https://images.unsplash.com/photo-1621245675746-adfdd75f0e02",
   secondary: "https://images.unsplash.com/photo-1670843837159-ddae2ec115d4"
 };
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Maria Silva",
+    location: "Vitória da Conquista, BA",
+    rating: 5,
+    text: "Os pães da Vovó Idalcy são simplesmente maravilhosos! Aquele cheirinho de pão quentinho me lembra a casa da minha avó. Compro toda semana e nunca me decepciono!",
+    avatar: "👩",
+    date: "Há 2 semanas"
+  },
+  {
+    id: 2,
+    name: "João Pedro Santos",
+    location: "Vitória da Conquista, BA",
+    rating: 5,
+    text: "O bolo de fubá é o melhor que já comi na vida! Molhadinho, saboroso e com aquele toque especial que só a Vovó sabe fazer. Virei cliente fiel!",
+    avatar: "👨",
+    date: "Há 1 mês"
+  },
+  {
+    id: 3,
+    name: "Ana Carolina",
+    location: "Vitória da Conquista, BA",
+    rating: 5,
+    text: "Descobri a padaria pelo Instagram e me apaixonei! Os biscoitos de polvilho são viciantes e o atendimento é sempre muito carinhoso. Recomendo demais!",
+    avatar: "👩‍🦰",
+    date: "Há 3 semanas"
+  },
+  {
+    id: 4,
+    name: "Roberto Oliveira",
+    location: "Vitória da Conquista, BA",
+    rating: 5,
+    text: "Faço encomendas semanais para o café da manhã da família. Tudo fresquinho, delicioso e com preço justo. A Vovó Idalcy conquistou nossa casa!",
+    avatar: "👨‍🦱",
+    date: "Há 1 semana"
+  },
+  {
+    id: 5,
+    name: "Beatriz Costa",
+    location: "Vitória da Conquista, BA",
+    rating: 5,
+    text: "O pão de queijo é perfeito! Crocante por fora e macio por dentro, exatamente como deve ser. Não consigo mais comprar em outro lugar!",
+    avatar: "👧",
+    date: "Há 4 dias"
+  },
+  {
+    id: 6,
+    name: "Carlos Eduardo",
+    location: "Vitória da Conquista, BA",
+    rating: 5,
+    text: "Excelente qualidade! O bolo de cenoura com brigadeiro que encomendei para o aniversário foi um sucesso. Todos os convidados pediram o contato. Parabéns!",
+    avatar: "🧑",
+    date: "Há 2 meses"
+  }
+];

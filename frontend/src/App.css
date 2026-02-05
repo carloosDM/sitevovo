@@ -217,3 +217,21 @@ html {
 .animate-pulse-slow {
   animation: pulse-slow 3s ease-in-out infinite;
 }
+
+/* Testimonial Cards */
+.testimonial-card {
+  position: relative;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  border: 2px solid #FBE0C3;
+  box-shadow: 0 4px 20px rgba(64, 50, 52, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(64, 50, 52, 0.15);
+  border-color: #FFBB98;
+}
