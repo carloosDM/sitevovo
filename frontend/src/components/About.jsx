@@ -22,12 +22,14 @@ const About = () => {
             {/* Left Column - Avatar & Story */}
             <div className="space-y-6">
               {/* Avatar/Photo Placeholder */}
-              <div className="relative w-48 h-48 sm:w-64 sm:h-64 mx-auto lg:mx-0">
+              <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 mx-auto lg:mx-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#FFBB98] to-[#FBE0C3] rounded-full animate-pulse-slow" />
-                <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center">
-                  <div className="text-center space-y-2">
-                    <img src="avatar.png" alt="Descrição da imagem" />
-                  </div>
+                <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="avatar.png" 
+                    alt="Vovó Idalcy"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
