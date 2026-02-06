@@ -30,14 +30,14 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-[#FBE0C3]/95 via-[#F7F3F5]/90 to-[#FFBB98]/85" />
       </div>
       {/* Decorative Elements */}
-      <div className="hidden sm:block absolute top-20 left-10 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 animate-float">
+      <div className="hidden sm:block absolute top-20 left-10 w-20 h-20 sm:w-24 sm:h-24 animate-float">
         <svg viewBox="0 0 100 100" className="w-full h-full">
           <defs>
             <clipPath id="circleClip">
-              <circle cx="50" cy="50" r="45" />
+              <circle cx="50" cy="50" r="48" />
             </clipPath>
           </defs>
-          <image href="avatar1.png" width="100" height="100" clipPath="url(#circleClip)" />
+          <image href="avatar1.png" x="0" y="0" width="100" height="100" clipPath="url(#circleClip)" preserveAspectRatio="xMidYMid slice" />
         </svg>
       </div>
 
@@ -51,12 +51,12 @@ const Hero = () => {
 
           {/* Subtitle with emojis */}
           <div className="space-y-2 sm:space-y-3 text-sm sm:text-base md:text-lg lg:text-xl text-[#403234]/90 font-body px-4">
-            <p className="flex items-center justify-center gap-2 flex-wrap">
-              <span className="text-xl sm:text-2xl">🥖</span>
+            <p className="flex items-center justify-center gap-2">
+              <span className="text-xl sm:text-2xl flex-shrink-0">🥖</span>
               <span className="text-center">Pães, bolos e biscoitos caseiros. O segredo é o amor!</span>
             </p>
-            <p className="flex items-center justify-center gap-2 flex-wrap">
-              <span className="text-xl sm:text-2xl">🥰</span>
+            <p className="flex items-center justify-center gap-2">
+              <span className="text-xl sm:text-2xl flex-shrink-0">🥰</span>
               <span className="text-center">Aqui todo cliente vira meu netinho!</span>
             </p>
           </div>

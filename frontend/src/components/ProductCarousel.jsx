@@ -82,7 +82,7 @@ const ProductCarousel = () => {
           onMouseLeave={() => setIsPaused(false)}
         >
           {/* Products Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 touch-pan-x overflow-x-auto">
             {visibleProducts.map((product) => (
               <div
                 key={product.id}
@@ -138,22 +138,6 @@ const ProductCarousel = () => {
               </div>
             ))}
           </div>
-
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="carousel-arrow left-2 sm:-left-4"
-            aria-label="Produto anterior"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="carousel-arrow right-2 sm:-right-4"
-            aria-label="Próximo produto"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
         </div>
 
         {/* Carousel Indicators */}
