@@ -138,6 +138,22 @@ const ProductCarousel = () => {
               </div>
             ))}
           </div>
+
+          {/* Navigation Arrows - Desktop Only */}
+          <button
+            onClick={prevSlide}
+            className="hidden md:flex carousel-arrow left-2 lg:-left-4"
+            aria-label="Produto anterior"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="hidden md:flex carousel-arrow right-2 lg:-right-4"
+            aria-label="Próximo produto"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
         </div>
 
         {/* Carousel Indicators */}
